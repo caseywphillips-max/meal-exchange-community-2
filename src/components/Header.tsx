@@ -23,9 +23,9 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center space-x-4">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-14 sm:h-16">
+          <div className="flex items-center space-x-2 sm:space-x-4">
             <Button
               variant="ghost"
               size="sm"
@@ -39,22 +39,22 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
               <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">K</span>
               </div>
-              <h1 className="text-xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+              <h1 className="text-lg sm:text-xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
                 Knoshr
               </h1>
             </Link>
           </div>
           
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-1 sm:space-x-4">
             {user && <NotificationCenter />}
             <Button
               variant="outline"
               size="sm"
               onClick={() => navigate('/shop')}
-              className="text-orange-600 border-orange-600 hover:bg-orange-50"
+              className="text-orange-600 border-orange-600 hover:bg-orange-50 px-2 sm:px-3"
             >
-              <ShoppingBag className="h-4 w-4 mr-2" />
-              Shop
+              <ShoppingBag className="h-4 w-4 sm:mr-2" />
+              <span className="hidden sm:inline">Shop</span>
             </Button>
             
             {user ? (
@@ -97,18 +97,20 @@ const Header: React.FC<HeaderProps> = ({ onNavigate }) => {
                 </DropdownMenuContent>
               </DropdownMenu>
             ) : (
-              <div className="flex items-center space-x-2">
+              <div className="flex items-center space-x-1 sm:space-x-2">
                 <Button
                   variant="ghost"
                   size="sm"
                   onClick={() => navigate('/login')}
+                  className="px-2 sm:px-3"
                 >
-                  Sign In
+                  <span className="hidden sm:inline">Sign In</span>
+                  <span className="sm:hidden">In</span>
                 </Button>
                 <Button
                   size="sm"
                   onClick={() => navigate('/signup')}
-                  className="bg-orange-600 hover:bg-orange-700"
+                  className="bg-orange-600 hover:bg-orange-700 px-2 sm:px-3"
                 >
                   Sign Up
                 </Button>

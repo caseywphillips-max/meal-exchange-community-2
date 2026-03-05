@@ -90,7 +90,7 @@ const AppLayout: React.FC = () => {
       
       {/* Main content */}
       <main className={cn(
-        "transition-all duration-300 ease-in-out p-6",
+        "transition-all duration-300 ease-in-out p-3 sm:p-6",
         sidebarOpen && !isMobile ? "ml-64" : "ml-0"
       )}>
         <div className="max-w-7xl mx-auto">

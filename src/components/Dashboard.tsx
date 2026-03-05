@@ -220,7 +220,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6 sm:space-y-8">
       {!user && <HeroSection onNavigate={onNavigate} />}
       
       <div className="space-y-6">
@@ -229,7 +229,7 @@ const Dashboard: React.FC<DashboardProps> = ({ onNavigate }) => {
             <SearchBar onSearch={handleSearch} />
           </div>
           {user && (
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2 w-full sm:w-auto">
               <Button
                 onClick={() => setShowMatches(!showMatches)}
                 variant={showMatches ? "default" : "outline"}

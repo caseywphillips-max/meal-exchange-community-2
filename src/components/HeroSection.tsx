@@ -36,15 +36,15 @@ const HeroSection: React.FC<HeroSectionProps> = ({ onNavigate }) => {
 
 
   return (
-    <div className="bg-gradient-to-br from-orange-50 to-red-50 py-12 mb-8 rounded-lg">
-      <div className="text-center mb-8">
-        <h2 className="text-4xl font-bold text-gray-800 mb-4">
+    <div className="bg-gradient-to-br from-orange-50 to-red-50 py-6 sm:py-12 mb-4 sm:mb-8 rounded-lg">
+      <div className="text-center mb-6 sm:mb-8 px-2 sm:px-0">
+        <h2 className="text-3xl sm:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
           Welcome to <span className="text-orange-500">Knoshr</span>
         </h2>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6">
+        <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto mb-5 sm:mb-6 leading-relaxed">
           Join meal prep communities, share delicious recipes, save money, reduce food waste and never eat the same thing twice!
         </p>
-        <div className="flex flex-col items-center justify-center gap-4 mb-6">
+        <div className="flex flex-col items-center justify-center gap-3 sm:gap-4 mb-4 sm:mb-6">
           <Button 
             size="lg" 
             className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3"

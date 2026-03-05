@@ -52,12 +52,12 @@ const FeatureButtons: React.FC<FeatureButtonsProps> = ({ onNavigate }) => {
 
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
         {features.map((feature, index) => {
           const Icon = feature.icon;
           return (
             <Card key={index} className="text-center hover:shadow-lg transition-all cursor-pointer group" onClick={feature.action}>
-              <CardContent className="pt-6">
+              <CardContent className="pt-5 pb-5">
                 <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-orange-200 transition-colors">
                   <Icon className="h-6 w-6 text-orange-500" />
                 </div>
